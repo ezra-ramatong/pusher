@@ -1,4 +1,4 @@
-# Pusher - Design Diff Browser Extension
+# 🎨 Pusher - Design Diff Browser Extension
 
 **Pusher** is a pixel-perfect design implementation tool that allows developers to overlay design mockups over live websites with an interactive draggable slider. Perfect for ensuring your implementation matches the original design exactly.
 
