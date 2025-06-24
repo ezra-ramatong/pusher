@@ -64,9 +64,9 @@ if (document.querySelector(".comparison-tool")) {
     handle.removeEventListener("pointermove", onPointerMove);
     handle.removeEventListener("pointerup", onPointerUp);
   };
-}
 
-window.addEventListener("resize", () => {
-  const rect = overlay.getBoundingClientRect();
-  handle.style.height = `${rect.height}px`;
-});
+  window.addEventListener("resize", () => {
+    const rect = overlay.getBoundingClientRect();
+    handle.style.height = `${rect.height}px`;
+  });
+}
