@@ -1,0 +1,24 @@
+{
+  "name": "pusher",
+  "version": "1.0.0",
+  "description": "**Pusher** is a pixel-perfect design implementation tool that allows developers to overlay design mockups over live websites with an interactive draggable slider. Perfect for ensuring your implementation matches the original design exactly.",
+  "main": "content.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezra-ramatong/pusher.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezra-ramatong/pusher/issues"
+  },
+  "homepage": "https://github.com/ezra-ramatong/pusher#readme",
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

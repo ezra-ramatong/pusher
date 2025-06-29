@@ -1,3 +1,7 @@
+// Todo: Dragging loses context / bugs out if you drag something else on the page, the handle stops working
+// Investigate: Discrepency between how Firefox and Chrome take screenshots
+// Idea?: Add state to keep position of handle / image between refreshes?
+// Idea: Add Pop UI for the extension for easy on and off toggling... or clicking the extension should toggle it?
 console.log("✨ Pusher is live and ready ✨");
 
 if (document.querySelector(".comparison-tool")) {
