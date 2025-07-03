@@ -2,14 +2,14 @@
 
 **Pusher** is a pixel-perfect design implementation tool that allows developers to overlay design mockups over live websites with an interactive draggable slider. Perfect for ensuring your implementation matches the original design exactly.
 
-![Demo](./assets/demo.gif)
-
 ## Manual Installation
 
 - [**Chrome**](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)
 - [**Firefox**](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)
 
 ## Usage
+
+![Demo](./assets/demo.gif)
 
 1. **Navigate to your target website** (localhost or any URL)
 2. **Click the Pusher extension icon** in your browser toolbar
