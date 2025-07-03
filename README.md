@@ -2,59 +2,12 @@
 
 **Pusher** is a pixel-perfect design implementation tool that allows developers to overlay design mockups over live websites with an interactive draggable slider. Perfect for ensuring your implementation matches the original design exactly.
 
-## Why I find it useful
-
-- Screenshot and overlay design mockups on any website
-- Interactive draggable slider for side-by-side comparison
-- Pixel-perfect design matching
-- Works on localhost and any website
-- Lightweight and fast
+![Demo](./assets/demo.mp4)
 
 ## Manual Installation
 
-### Chrome Setup
-
-1. **Download/Clone the Extension**
-
-   - Ensure you have all extension files in a folder (manifest.json, content.js, style.css, etc.)
-
-2. **Enable Developer Mode**
-
-   - Open Chrome and navigate to `chrome://extensions/`
-   - Toggle **Developer mode** ON (top-right corner)
-
-3. **Load the Extension**
-
-   - Click **Load unpacked** button
-   - Select the folder containing your extension files
-   - The extension should now appear in your extensions list
-
-4. **Pin the Extension** (Optional)
-   - Click the puzzle piece icon in the toolbar
-   - Find "Pusher" and click the pin icon to keep it visible
-
-### Firefox Setup
-
-1. **Download/Clone the Extension**
-
-   - Ensure you have all extension files in a folder
-
-2. **Access Debug Mode**
-
-   - Open Firefox and navigate to `about:debugging`
-   - Click **This Firefox** in the left sidebar
-
-3. **Load Temporary Extension**
-
-   - Click **Load Temporary Add-on**
-   - Navigate to your extension folder and select `manifest.json`
-   - The extension will be loaded temporarily (until Firefox restart)
-
-4. **For Permanent Installation** (Development)
-   - For permanent installation during development, you'll need to:
-     - Set `xpinstall.signatures.required` to `false` in `about:config`
-     - Package the extension as an XPI file
-     - Note: This disables signature verification (development only)
+- [**Chrome**](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)
+- [**Firefox**](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)
 
 ## Usage
 
@@ -64,18 +17,13 @@
 4. **Use the draggable slider** to compare your implementation with the design
 5. **Make adjustments** to your code to achieve pixel-perfect matching
 
-> I should probably add a Drag and drop functionality for even easier image loading.
-
-## Development Notes
-
 ### File Structure
 
 ```
-pusher-extension/
+dist/
 ├── manifest.json
 ├── content.js
 ├── style.css
-└── [other extension files]
 ```
 
 ### Permissions Explained
@@ -113,13 +61,6 @@ pusher-extension/
 - **Chrome**: Version 88+ (Manifest v3 support)
 - **Firefox**: Version 109+ (Manifest v3 support)
 - **Edge**: Version 88+ (Chromium-based)
-
-## Development Tips
-
-1. **Hot Reloading**: After making changes, click the refresh icon next to your extension in the extensions page
-2. **Debugging**: Use browser developer tools to debug content scripts
-3. **Console Logging**: Check both the extension console and page console for different types of logs
-4. **File Permissions**: Ensure all files have proper read permissions
 
 ## Security Notes
 
