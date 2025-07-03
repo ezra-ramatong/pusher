@@ -2,10 +2,7 @@
 
 **Pusher** is a pixel-perfect design implementation tool that allows developers to overlay design mockups over live websites with an interactive draggable slider. Perfect for ensuring your implementation matches the original design exactly.
 
-<video width="800" controls>
-  <source src="./assets/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Demo](./assets/demo.gif)
 
 ## Manual Installation
 
