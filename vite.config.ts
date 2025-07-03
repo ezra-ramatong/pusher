@@ -9,7 +9,7 @@ export default {
       input: isDev
         ? undefined // Let Vite use index.html in dev
         : {
-            content: resolve(__dirname, "src/content.js"), // build entry
+            content: resolve(__dirname, "src/content.ts"), // build entry
           },
       output: {
         entryFileNames: "[name].js", // Will produce content.js

@@ -26,8 +26,8 @@ if (document.querySelector(".comparison-tool")) {
   picker.style.zIndex = "1000001";
   picker.style.pointerEvents = "auto";
 
-  picker.addEventListener("change", (e) => {
-    const file = e.target.files[0];
+  picker.addEventListener("change", () => {
+    const file = picker.files?.[0];
     if (!file) return;
 
     const url = URL.createObjectURL(file);
@@ -55,14 +55,14 @@ if (document.querySelector(".comparison-tool")) {
     handle.addEventListener("pointerup", onPointerUp);
   });
 
-  const onPointerMove = (e) => {
+  const onPointerMove = (e: PointerEvent) => {
     if (!isDragging) return;
     const clamped = Math.min(Math.max(e.clientX, 0), window.innerWidth);
     handle.style.transform = `translateX(${clamped}px)`;
     overlay.style.clipPath = `inset(0 0 0 ${clamped}px)`;
   };
 
-  const onPointerUp = (e) => {
+  const onPointerUp = (e: PointerEvent) => {
     isDragging = false;
     handle.releasePointerCapture(e.pointerId);
     handle.removeEventListener("pointermove", onPointerMove);
