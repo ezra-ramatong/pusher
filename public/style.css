@@ -1,4 +1,6 @@
 .comparison-tool {
+  user-select: none;
+  pointer-events: auto;
 
   *,
   *::before,
@@ -74,16 +76,20 @@
   left: 0;
   width: 100%;
   opacity: 0.95;
+  pointer-events: none;
 }
 
 .comparison-tool .handle {
-  position: relative;
+  position: absolute;
   background: hsl(168.6, 62.9%, 70.4%);
   width: 0.625em;
   pointer-events: auto;
+  touch-action: none;
+  cursor: ew-resize;
+  z-index: 1000002;
+  user-select: none;
 }
 
-.comparison-tool .handle:hover {
+/* .comparison-tool .handle:hover {
   background: hsl(0, 62.9%, 70.4%);
-  cursor: ew-resize;
-}
+} */

@@ -188,6 +188,7 @@ async function initializePusher(): Promise<void> {
   container.appendChild(handle);
   container.appendChild(picker);
   document.body.appendChild(container);
+  document.addEventListener("dragstart", (e) => e.preventDefault());
 
   await restoreState(overlay, handle);
 }
