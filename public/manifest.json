@@ -3,7 +3,7 @@
   "name": "Pusher",
   "version": "1.0",
   "description": "Pixel-perfect design implementation tool. Overlay design mockups over live websites with an interactive draggable slider to compare and match layouts with precision.",
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "storage"],
   "content_scripts": [
     {
       "matches": [
