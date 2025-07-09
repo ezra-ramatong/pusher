@@ -1,8 +1,5 @@
-// Todo: Dragging loses context / bugs out if you drag something else on the page, the handle stops working
-// Above: only appears to be an issue in Chrome
 // Investigate: Discrepency between how Firefox and Chrome take screenshots
 // Idea: Add Pop UI for the extension for easy on and off toggling... or clicking the extension should toggle it?
-// NOTE: When handle is at max/above width, it creates horizontal overflow (undesirable)
 
 interface PusherState {
   imageDataUrl?: string;
@@ -92,6 +89,12 @@ function setupFilePickerHandler(
   });
 }
 
+function clampHandlePosition(position: number, handle: HTMLDivElement): number {
+  const handleRect = handle.getBoundingClientRect();
+  const maxPosition = window.innerWidth - handleRect.width;
+  return Math.min(Math.max(position, 0), maxPosition);
+}
+
 function setupDragHandlers(
   handle: HTMLDivElement,
   overlay: HTMLImageElement,
@@ -100,7 +103,7 @@ function setupDragHandlers(
 
   const onPointerMove = (e: PointerEvent): void => {
     if (!isDragging) return;
-    const clamped = Math.min(Math.max(e.clientX, 0), window.innerWidth);
+    const clamped = clampHandlePosition(e.clientX, handle);
     handle.style.transform = `translateX(${clamped}px)`;
     overlay.style.clipPath = `inset(0 0 0 ${clamped}px)`;
   };
@@ -157,8 +160,9 @@ async function restoreState(
     const rect = overlay.getBoundingClientRect();
     handle.style.height = `${rect.height}px`;
     if (state.handlePosition !== undefined) {
-      handle.style.transform = `translateX(${state.handlePosition}px)`;
-      overlay.style.clipPath = `inset(0 0 0 ${state.handlePosition}px)`;
+      const clampedPosition = clampHandlePosition(state.handlePosition, handle);
+      handle.style.transform = `translateX(${clampedPosition}px)`;
+      overlay.style.clipPath = `inset(0 0 0 ${clampedPosition}px)`;
     }
   };
 
