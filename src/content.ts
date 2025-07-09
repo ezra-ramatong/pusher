@@ -77,6 +77,8 @@ function setupFilePickerHandler(
 
     overlay.onload = () => {
       overlay.style.display = "block";
+      overlay.width = overlay.naturalWidth;
+      overlay.height = overlay.naturalHeight;
       const rect = overlay.getBoundingClientRect();
       handle.style.height = `${rect.height}px`;
 
@@ -157,6 +159,8 @@ async function restoreState(
   }
 
   overlay.onload = () => {
+    overlay.width = overlay.naturalWidth;
+    overlay.height = overlay.naturalHeight;
     const rect = overlay.getBoundingClientRect();
     handle.style.height = `${rect.height}px`;
     if (state.handlePosition !== undefined) {
